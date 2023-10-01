@@ -1,0 +1,1 @@
+this is a technical preview, the code was NOT tested and the extension most probably doesnt work (yet). This will be turned into a real extension after the hackathon but because of how late we started coding it isnt really possible rn. 
