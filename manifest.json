@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,  // Use Manifest V3 for the latest version
+  "name": "Movie Trigger Warnings",
+  "version": "1.0",
+  "description": "Get trigger warnings for movies.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "http://*/*",  // Adjust this to the URLs you want to access
+    "https://*/*"
+  ],
+  "icons": {
+    "48": "icon48.png",   // Include icon images (48x48, 96x96, etc.)
+    "96": "icon96.png"
+  },
+  "action": {
+    "default_popup": "popup.html",  // Specify the HTML file for the popup
+    "default_icon": {
+      "16": "icon16.png",  // Icon for the extension in the toolbar
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"  // Specify the background script
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],  // Adjust this to the URLs you want to inject content into
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  }
+}
